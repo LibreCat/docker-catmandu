@@ -8,10 +8,10 @@ Starting this Catmandu image is easy:
 docker run -it librecat/catmandu
 ```
 
-Now, you should check your catmandu version:
+Now, you should be able to run:
 
 ```bash
-catmandu version
+catmandu help
 ```
 # NAME
 

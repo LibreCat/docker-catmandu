@@ -11,7 +11,15 @@ RUN apt-get update && apt-get install -y \
   libxml2-dev \
   libxslt1-dev \
   libgdbm-dev \
-  libcapture-tiny-perl
+  libcapture-tiny-perl\
+  curl \
+  wget \
+  nano \
+  vim \
+#  cal \
+  tree \
+  man-db \
+  perl-doc
 
 RUN adduser --disabled-password --gecos "" catmandu
 
@@ -21,9 +29,6 @@ WORKDIR /home/catmandu
 
 RUN cpanm -n -q --installdeps . && \
   rm -rf /var/lib/apt/lists/*
-
-RUN apt-get remove -y cpanminus build-essential && \
-  apt-get autoremove -y
 
 RUN chown catmandu:catmandu *
 
