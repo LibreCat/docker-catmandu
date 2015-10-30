@@ -1,7 +1,4 @@
 # Dockerizing Catmandu
-#
-# run this image with docker run -it ....
-#
 
 FROM debian:jessie
 MAINTAINER Vitali Peil
@@ -20,8 +17,10 @@ COPY . /home/catmandu
 
 WORKDIR /home/catmandu
 
-RUN cpanm -n -q Carton && carton install
+RUN cpanm -n -q --installdeps . && \
+  rm -rf /var/lib/apt/lists/*
 
-RUN PATH="$PATH":/home/catmandu/local/bin
+RUN apt-get remove -y cpanminus build-essential && \
+  apt-get autoremove -y
 
 CMD ["/bin/bash"]
