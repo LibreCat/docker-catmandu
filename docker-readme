@@ -1,0 +1,15 @@
+# Docker Image for Catmandu
+
+## How to use this docker image
+
+Starting this Catmandu image is easy:
+
+```bash
+docker run -it librecat/catmandu
+```
+
+Now, you should check your catmandu version:
+
+```bash
+catmandu version
+```
