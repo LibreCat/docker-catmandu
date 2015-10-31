@@ -13,6 +13,13 @@ Now, you should be able to run:
 ```bash
 catmandu help
 ```
+
+Upgrade an existing docker image to the latest version:
+
+```bash
+docker pull librecat/catmandu
+```
+
 # NAME
 
 Catmandu::Introduction - a Catmandu HOW TO
