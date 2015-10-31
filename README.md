@@ -20,6 +20,23 @@ Upgrade an existing docker image to the latest version:
 docker pull librecat/catmandu
 ```
 
+Start docker with access to your own files:
+
+Windows:
+```bash
+docker run -v C:\Users\yourname:/home/catmandu/Home -it librecat/catmandu
+```
+
+OSX:
+```bash
+docker run -v /Users/yourname:/home/catmandu/Home -it librecat/catmandu
+```
+
+Linux:
+```bash
+docker run -v /home/yourname:/home/catmandu/Home -it librecat/catmandu
+```
+
 # NAME
 
 Catmandu::Introduction - a Catmandu HOW TO
