@@ -8,10 +8,10 @@ Starting this Catmandu image is easy:
 docker run -it librecat/catmandu
 ```
 
-Now, you should be able to run:
+Now, you should be able to run this command in the docker terminal:
 
 ```bash
-catmandu help
+catmandu@d45e783d0bca:~$ catmandu help
 ```
 
 Upgrade an existing docker image to the latest version:
