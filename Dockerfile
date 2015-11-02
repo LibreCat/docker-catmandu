@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
   wget \
   nano \
   vim \
-#  cal \
+  bsdmainutils \
   tree \
   man-db \
   perl-doc
