@@ -1,7 +1,7 @@
 requires 'perl', 'v5.10.1';
 
 # Catmandu
-requires 'Catmandu', '0.9502';
+requires 'Catmandu', '0.9503';
 requires 'Catmandu::BibTeX';
 requires 'Catmandu::MARC';
 requires 'Catmandu::XML';
