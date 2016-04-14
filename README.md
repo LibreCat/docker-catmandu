@@ -48,22 +48,22 @@ Catmandu::Introduction - a Catmandu HOW TO
 
 # Introduction
 
-Catmandu is a data processing toolkit developed as part of the [LibreCat](http://librecat.org) project. 
-Catmandu provides a command line client and a suite of tools to ease the import, storage, retrieval, 
+Catmandu is a data processing toolkit developed as part of the [LibreCat](http://librecat.org) project.
+Catmandu provides a command line client and a suite of tools to ease the import, storage, retrieval,
 export and transformation of data. For instance, to transform a CSV file into JSON use the
 command:
 
     $ catmandu convert JSON to CSV < data.json
 
-Or, to store a YAML file into an ElasticSearch database type:
+Or, to store a YAML file into an ElasticSearch database type (requires Catmandu::ElasticSearch):
 
     $ catmandu import YAML to ElasticSearch --index_name demo < test.yml
 
-To export all the data from an Solr search engine into JSON type:
+To export all the data from an Solr search engine into JSON type (requires Catmandu::Solr):
 
     $ catmandu export Solr --url http://localhost:8983/solr to JSON
 
-With Catmandu one can import OAI-PMH records in your application:
+With Catmandu one can import OAI-PMH records in your application (requires Catmandu::OAI):
 
     $ catmandu convert OAI --url http://biblio.ugent.be/oai --set allFtxt
 
@@ -84,9 +84,9 @@ One can also work on deeply nested data. E.g. create a deeply nested data struct
 In this example we moved the field 'title' into the field 'my', which contains a (sub)field 'deeply',
 which contains a (sub)field 'nested'.
 
-Catmandu was created by librarians for librarians. We process a lot of metadata especially 
+Catmandu was created by librarians for librarians. We process a lot of metadata especially
 library metadata in formats such as MARC, MAB2 and MODS. With the following command we can extract
-data from a marc record and to store it into the title field:
+data from a marc record and to store it into the title field (requires Catmandu::MARC):
 
     $ catmandu convert MARC --fix 'marc_map(245,title)' < data.mrc
 
@@ -121,7 +121,7 @@ Run this (on Linux) by setting the executable bit:
      $ chmod 755 myfix.fix
      $ ./myfix.fix
 
-To experiment with the Fix language you can also run the catmandu Fix interpreter in an 
+To experiment with the Fix language you can also run the catmandu Fix interpreter in an
 interactive mode:
 
      $ catmandu run
@@ -133,12 +133,12 @@ interactive mode:
      ...
      fix >
 
-Catmandu contains many powerfull fixes. Visit [http://librecat.org/Catmandu/#fixes-cheat-sheet](http://librecat.org/Catmandu/#fixes-cheat-sheet) to get 
+Catmandu contains many powerfull fixes. Visit [http://librecat.org/Catmandu/#fixes-cheat-sheet](http://librecat.org/Catmandu/#fixes-cheat-sheet) to get
 an overview what is possible.
 
 # Documentation
 
-For more information read our [documentation pages](http://librecat.org/Catmandu/) 
+For more information read our [documentation pages](http://librecat.org/Catmandu/)
 and [blog](https://librecatproject.wordpress.com/)
 for a complete introduction and update into all Catmandu features.
 
@@ -147,17 +147,17 @@ day introduction into the UNIX command line and Catmandu:
 
 [https://librecatproject.wordpress.com/2014/12/01/day-1-getting-catmandu/](https://librecatproject.wordpress.com/2014/12/01/day-1-getting-catmandu/)
 
-If you need extra training, our developers regulary host workshops at library 
+If you need extra training, our developers regulary host workshops at library
 conferences and events: [http://librecat.org/events.html](http://librecat.org/events.html)
 
 # Installation
 
-There are several ways to get a working version of Catmandu on your computer. 
+There are several ways to get a working version of Catmandu on your computer.
 For a quick and demo installation visit our [blog](https://librecatproject.wordpress.com/get-catmandu/)
 where a VirtualBox image is available containing all the Catmandu modules, including
 ElasticSearch and MongoDB.
 
-On our [website](http://librecat.org/Catmandu/) we provide installation instructions for:
+On our [website](http://librecat.org/Catmandu/#installation) we provide installation instructions for:
 
     * Debian
     * Ubuntu Server
@@ -166,19 +166,19 @@ On our [website](http://librecat.org/Catmandu/) we provide installation instruct
     * OpenBSD
     * Windows
 
-and even a generic installation using [Docker](https://www.docker.com/).
+and even a generic installation using [Docker](https://www.docker.com/): [https://hub.docker.com/r/librecat/catmandu/](https://hub.docker.com/r/librecat/catmandu/).
 
 # Open Source
 
-Catmandu software published at https://github.com/LibreCat/Catmandu is free software without warranty, liabilities 
-or support; you can redistribute it and/or modify it under the terms of the GNU General Public License as 
-published by the Free Software Foundation; either version 2 or any later version. Every contributor is free 
+Catmandu software published at https://github.com/LibreCat/Catmandu is free software without warranty, liabilities
+or support; you can redistribute it and/or modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation; either version 2 or any later version. Every contributor is free
 to state her/his copyright.
 
 # Developers & Support
 
 Catmandu has a very active international developer community. We welcome all feedback, bug reports and
-feature enhancement. 
+feature enhancement.
 
 Join our mailing list to receive more information:  `librecat-dev@librecat.org`
 
@@ -188,10 +188,10 @@ Catmandu packages!
 # Kudos
 
 Catmandu is created in a cooperation with many developers world wide. Without them this project isn't possible.
-We would like to thank our core maintainer: Nicolas Steenlant and all contributors: Christian Pietsch , 
-Dave Sherohman , Friedrich Summann , Jakob Voss , Johann Rolschewski  , Jorgen Eriksson  , Magnus Enger , 
-Maria Hedberg , Mathias Loesch , Najko Jahn , Nicolas Franck , Patrick Hochstenbach , Petra Kohorst  , 
-Snorri Briem , Upasana Shukla and Vitali Peil 
+We would like to thank our core maintainer: Nicolas Steenlant and all contributors: Christian Pietsch ,
+Dave Sherohman , Friedrich Summann , Jakob Voss , Johann Rolschewski  , Jorgen Eriksson  , Magnus Enger ,
+Maria Hedberg , Mathias Loesch , Najko Jahn , Nicolas Franck , Patrick Hochstenbach , Petra Kohorst  ,
+Snorri Briem , Upasana Shukla and Vitali Peil
 
 # SEE ALSO
 

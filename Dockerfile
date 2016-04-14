@@ -4,6 +4,7 @@ FROM debian:jessie
 MAINTAINER Vitali Peil
 
 RUN apt-get update && apt-get install -y \
+  sudo \
   cpanminus \
   build-essential \
   libexpat1-dev \
