@@ -16,3 +16,8 @@ requires 'Catmandu::MAB2';
 requires 'Catmandu::OAI';
 requires 'Catmandu::Solr';
 requires 'Catmandu::RDF';
+requires 'Catmandu::Store::MongoDB';
+requires 'Catmandu::Store::ElasticSearch';
+requires 'LWP::Protocol::https';
+requires 'Catmandu::Fix::marc_spec';
+requires 'Catmandu::Fix::author_names';
