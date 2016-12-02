@@ -20,4 +20,3 @@ requires 'Catmandu::Store::MongoDB';
 requires 'Catmandu::Store::ElasticSearch';
 requires 'LWP::Protocol::https';
 requires 'Catmandu::Fix::marc_spec';
-requires 'Catmandu::Fix::author_names';
