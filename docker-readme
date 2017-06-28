@@ -36,3 +36,29 @@ Linux:
 ```bash
 docker run -v /home/yourname:/home/catmandu/Home -it librecat/catmandu
 ```
+
+# Build the Catmandu image from scratch
+
+Clone the GitHub repository:
+
+```bash
+git clone https://github.com/LibreCat/docker-catmandu
+```
+
+Start your Docker host and change directory into `docker-catmandu`:
+
+```bash
+cd docker-catmandu
+```
+
+Build the image:
+
+```bash
+docker build -t test_catmandu .
+```
+
+Start the image:
+
+```bash
+docker run -it test_catmandu
+```
