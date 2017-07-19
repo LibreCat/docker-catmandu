@@ -19,6 +19,7 @@ requires 'Catmandu::Store::ElasticSearch','>=0.0509';
 requires 'Catmandu::Stat','>=0.13';
 requires 'Catmandu::Template','>=0.08';
 requires 'Catmandu::XSD','>=0.04';
+require  'Catmandu-Fix-Date', '>=0.0131';
 requires 'LWP::Protocol::https';
 requires 'Search::Elasticsearch::Client::5_0';
 requires 'Search::Elasticsearch::Client::2_0';
